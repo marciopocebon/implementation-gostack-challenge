@@ -65,7 +65,7 @@ describe("Likes", () => {
 
     await actWait();
 
-    expect(getByTestId("repository-likes")).toHaveTextContent("1 curtida");
+    expect(getByTestId(`repository-likes-${repositoryId}`)).toHaveTextContent("1 curtida");
 
     apiMock
       .onPost(`repositories/${repositoryId}/like`)
